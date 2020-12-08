@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import glob2 as glob # TODO: can we just use glob in python 3?
 import os
 import subprocess

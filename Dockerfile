@@ -18,10 +18,10 @@ RUN apt update \
 
 # Install python modules
 RUN apt update \
- && apt install -y python-pip python-setuptools \
+ && apt install -y python3 python3-pip python3-setuptools \
  && rm -rf /var/lib/apt/lists/* \
- && pip install --upgrade pip
-RUN pip install glob2
+ && pip3 install --upgrade pip
+RUN pip3 install glob2
 
 # Download and install XC16 compiler
 RUN curl -fSL -A "Mozilla/4.0" -o /tmp/xc16.run "http://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v1.61-full-install-linux64-installer.run" \
