@@ -1,10 +1,4 @@
- FROM ubuntu:bionic
-
-# AWS APT mirrors
-RUN sed -i 's+http://security.ubuntu.com/+http://archive.ubuntu.com/+g' /etc/apt/sources.list \
- && sed -i 's+http://archive.ubuntu.com/+http://us-east-1.ec2.archive.ubuntu.com/+g' /etc/apt/sources.list \
- && apt update \
- && rm -rf /var/lib/apt/lists/*
+ FROM ubuntu:focal
 
 # Install git and ssh
 RUN apt update \
